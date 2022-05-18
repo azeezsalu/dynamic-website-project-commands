@@ -1,0 +1,9 @@
+sudo su
+sudo aws s3 sync s3://aosnotes77-fleetcart-dummy-data /home/ec2-user
+sudo unzip dummy.zip
+sudo mv dummy/* /var/www/html/public
+sudo mv -f dummy/.DS_Store /var/www/html/public
+sudo rm -rf /var/www/html/storage/framework/cache/data/cache
+sudo rm -rf dummy dummy.zip
+chown apache:apache -R /var/www/html 
+sudo service httpd restart
