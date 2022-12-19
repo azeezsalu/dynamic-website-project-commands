@@ -3,7 +3,7 @@ sudo yum update -y
 
 
 #2. install apache 
-sudo yum install -y httpd httpd-tools mod_ssl
+sudo yum install -y httpd
 sudo systemctl enable httpd 
 sudo systemctl start httpd
 
