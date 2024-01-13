@@ -23,26 +23,26 @@ sudo systemctl enable mysqld
 sudo systemctl start mysqld
 
 
-#5. download the FleetCart zip from s3 to the html derectory on the ec2 instance
+#5. download the rentzone zip from s3 to the html derectory on the ec2 instance
 sudo aws s3 sync s3://aosnote-rentzone-web-files /var/www/html
 
 
-#6. unzip the FleetCart zip folder
+#6. unzip the rentzone zip folder
 cd /var/www/html
 sudo unzip rentzone.zip
 
 
-#7. move all the files and folder from the FleetCart directory to the html directory
+#7. move all the files and folder from the rentzone directory to the html directory
 sudo mv rentzone/* /var/www/html
 
 
-#8. move all the hidden files from the FleetCart diretory to the html directory
+#8. move all the hidden files from the rentzone diretory to the html directory
 sudo mv rentzone/.well-known /var/www/html
 sudo mv rentzone/.env /var/www/html
 sudo mv rentzone/.htaccess /var/www/html
 
 
-#9. delete the FleetCart and FleetCart.zip folder
+#9. delete the rentzone and rentzone.zip folder
 sudo rm -rf rentzone rentzone.zip
 
 
